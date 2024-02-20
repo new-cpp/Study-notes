@@ -1,0 +1,42 @@
+#+title: Org Mod basics
+
+* Headlines (lvl1 one astriks) :test:
+
+** Headlines (lvl2 two astriks)
+
+**  M-Enter :will create next headline of the same lvl
+
+**  hold on the Meta key +  line to alter the levels order
+
+
+* Tags: :test2:
+tags : Ctrl-C Ctrl C add tage on any heading , for filtring
+
+* Lists:
+
+a) item1
+b) item2
+c) item3
+   - subitem1
+   - subitem2
+
+shortcut:
+  - Meta + arrow key on item list will promote or demote item level on the list.
+  - shift + arrow key on item list will change list type (numeration , alpha ....)
+
+
+- Progress list [2/3] [66%]
+  - [X] first task
+  - [X] second task
+  - [ ] third task
+
+shortcut:
+ - to add the progress cookies just put [/] or [%] at the end of the parent list.
+ - to check a sub task : Ctrl + C, Ctrl + C
+
+
+ Ctrl h,i -> internal documetation.
+
+ sources:
+ https://orgmode.org/worg/org-tutorials/org4beginners.html
+ yt channle :Chris Maiorana - Emacs | Org Mode Basics For Beginners
