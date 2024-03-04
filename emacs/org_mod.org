@@ -40,3 +40,7 @@ shortcut:
  sources:
  https://orgmode.org/worg/org-tutorials/org4beginners.html
  yt channle :Chris Maiorana - Emacs | Org Mode Basics For Beginners
+
+
+* Fold the current Section: <TAB>
+* Fold the all Section: < Shift - TAB>
