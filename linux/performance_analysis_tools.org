@@ -1,0 +1,16 @@
+#+title: Linux performance tools
+
+* uptime:
+ view load averages,which indicate the number of tasks(processes) wanting to run.
+
+* dmesg :
+ view the last 10 system messages.
+
+* vmstat1
+ virtual memory state.
+  columns:
+   r : number of processes running on CPU and waiting for a turn. determing CPU        saturation.
+
+   free: free memory in Kb( free -m command better alternative )
+
+   si,so: swap in,swap out, if these are non-zero, you're out of memory
