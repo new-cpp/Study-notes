@@ -1,0 +1,18 @@
+#+title: sum Queries
+
+Typical queries are range sum queries (calculating the sum of values) and
+range minimum queries (finding the minimum value).
+
+** Queries on Static Arrays
+- we focus on a situation where the array is static, i.e., the array values
+are never updated between the queries. In this case, it suffices to preprocess the array
+so that we can efficiently answer range queries.
+*** Sum Queries:
+ - prefix sum :
+    - sumq (a, b) = sumq (0, b) - sumq (0, a - 1).
+
+ - 2 dimension array:
+   - S(X) = S(A) - S(B) - S(C) + S(D).
+     X : the sum of values in a rectangular subarray from the upper-left
+         corner to the position of X.
+     A : sum of value from (0,0) to corner to the postion of X.

@@ -1,0 +1,23 @@
+
+#+Title example usage
+
+#+begin_src cmake
+cmake_minimum_required(VERSION 3.24)
+
+project(vulkan_test)
+
+file(GLOB_RECURSE SOURCES src/*.cpp)
+file(GLOB_RECURSE HEADERS src/*.hpp)
+
+add_executable($(PROJECT_NAME) $(SOURCES) $(HEADERS))
+
+#glfw
+find_package(glfw3 REQUIRED)
+
+target_link_libraries($(PROJECT_NAME) glfw)
+#vulkan
+
+find_package(Vulkan REQUIRED)
+
+target_link_libraries($(PROJECT_NAME) vulkan)
+#+end_src

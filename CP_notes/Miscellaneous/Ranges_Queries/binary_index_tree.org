@@ -1,0 +1,45 @@
+#+title: Binary Index Tree
+
+A binary indexed tree (BIT) (or a Fenwick tree) can be seen as a dynamic variant of a
+prefix sum array. It provides two O(log n) time operations: processing a range sum
+query and updating a value.
+
+(using 1 indexed array)
+- query : calculate sum from [1,k]:
+  #+begin_src cpp
+
+    int sum(int k)
+      {
+        int s = 0;
+        while( k > 0 )
+          {
+            s += tree[k];
+            k -= k&-k; //isolates the least significant one bit of k
+          }
+        return s;
+      }
+  #+end_src
+
+- update : increases the array value at position k by x
+  #+begin_src cpp
+
+    int add(int k , int x)
+      {
+        while( k <= n)
+          {
+            tree[k] += x;
+            k += k&-k;
+          }
+      }
+  #+end_src
+
+
+** Bonus:
+ k&-k : get the least significant bit
+        (e.g. 0110100 -> 0000100 , 00001 ->00001)
+
+ k&(k+1): replace all trailing 1 bits in the binary representation of i with 0 bits.(if it's end with 0 ,stay the same , else reverse all trailing 1's to 0 )
+         (e.g.  010110 -> 010110   01011 -> 01000 )
+
+ k|(k+1): flip the last unset bit.
+         (e.g.  1010010 -> 1010011 001111 -> 011111)

@@ -1,0 +1,76 @@
+#+Title : sparse table:
+
+* minumuim queries:
+
+** sparse table:
+  - Sparse Table is a data structure, that allows answering range queries. It can answer most range queries in O(log(n))
+  but min or max queries just in O(1).
+  - non update between queries.
+
+** intuition:
+ - 13 = (1011) = 8 + 4 + 1.
+ - [2, 14] = [2,9] U [10,13] U [14,14] (each sub interval of length of decreasing power of 2)
+
+** main idea:
+  - The main idea behind Sparse Tables is to precompute all answers for range queries with power of two length.
+    Afterwards a different range query can be answered by splitting the range into ranges with power of two lengths,
+    looking up the precomputed answers, and combining them to receive a complete answer.
+
+** Precomputation
+  - We will use a 2-dimensional array for storing the answers to the precomputed queries.
+
+  -  st[i][j] stores he answer for the range [j][j + 2^i - 1] of length 2^i.
+  - The size of the 2-dimensional array will be K * MAXN s.t. :
+     -  MAXN : is the biggest possible array length.
+     -  K    : For arrays with reasonable length (< 10^7), K = 25 is a good value.
+
+ - using dp:
+
+      #+begin_src cpp
+
+      int st[K + 1][MAXN];
+      std::copy(array.begin(), array.end(), st[0]);
+
+       for (int i = 1; i <= K; i++)
+         for (int j = 0; j + (1 << i) <= N; j++)
+           st[i][j] = f(st[i - 1][j], st[i - 1][j + (1 << (i - 1))]);
+      #+end_src
+
+- time complextiy of precomputation is nlog(n);
+- f is either sum or min or max depends on the query.
+
+** Ranges queries sum:
+ go through all power of 2 ,process the first part [L,L + 2^i -1] , then [L+2^i, R]; time complextiy O(log(MAXN))= O(K);
+ #+begin_src cpp
+  long long sum = 0;
+  for (int i = K; i >= 0; i--) {
+    if ((1 << i) <= R - L + 1) {
+        sum += st[i][L];
+        L += 1 << i;
+    }
+}
+ #+end_src
+
+** Range minimum queries(RMQ):
+- in this case we just split the range into 2 equal size of power of 2.
+  min element in range [L,R] = min( st[i][L], st[i][R-2^i -1] ), i = log2(R-L+1);
+
+  #+begin_src cpp
+   int i = log_floor(R - L + 1;
+   int minimum = min(st[i][L], st[i][R - (1 << i) + 1]);
+  #+end_src
+
+
+
+** Bonus:
+ #+begin_src cpp
+#include <bit>
+int log2_floor(unsigned long i) {
+    return std::bit_width(i) - 1;
+}
+
+// pre C++20
+int log2_floor(unsigned long long i) {
+    return i ? __builtin_clzll(1) - __builtin_clzll(i) : -1;
+    /* __builtin_clz(x): Counts the leading number of zeros of the integer*/
+ #+end_src

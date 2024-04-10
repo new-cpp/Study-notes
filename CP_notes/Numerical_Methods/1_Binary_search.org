@@ -164,3 +164,26 @@ for(int it = 0 ;it <= 70;++it)
   }
 std::cout<<mid;
  #+end_src
+
+
+
+
+
+ trick!!! :
+ sometime the check function may be some sort of product of long long numbers .. which result in integer overflow .. solution
+ determine the r value before bineary seach of which the first power of 2 is true:
+ while(!check(r)) r*=2;
+
+ base on expreince use this verision
+
+ while(!good(r))r *=2;
+ while( r > l+1)
+ {
+   int mid = l +(r - l)/2;
+   if(good(mid))
+    l = mid;
+   else
+    r = mid;
+ }
+
+ std::cout<<l;
