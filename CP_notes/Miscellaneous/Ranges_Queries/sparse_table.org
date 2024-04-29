@@ -4,7 +4,7 @@
 
 ** sparse table:
   - Sparse Table is a data structure, that allows answering range queries. It can answer most range queries in O(log(n))
-  but min or max queries just in O(1).
+  but *min or max or gcd* queries just in O(1).
   - non update between queries.
 
 ** intuition:
