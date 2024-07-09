@@ -1,0 +1,3 @@
+D:/github/study_note/sdl/build/CMakeFiles/main.dir
+D:/github/study_note/sdl/build/CMakeFiles/ALL_BUILD.dir
+D:/github/study_note/sdl/build/CMakeFiles/ZERO_CHECK.dir

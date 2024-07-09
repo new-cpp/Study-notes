@@ -1,0 +1,21 @@
+neovim installation:
+
+useful commands :
+  :echo stdpath('config')
+  :help 'runtimepath'
+  
+
+plug.vim location : 
+C:\Users\hp\AppData\Local\nvim\autoload
+
+
+init.vim location :
+  - C:\Users\hp\AppData\Local\nvim\init.vim
+  
+
+init.vim good starting configuration :
+	https://builtin.com/software-engineering-perspectives/neovim-configuration
+	
+	
+python provider problem solution:
+	python3 -m pip install --user --upgrade pynvim

@@ -1,0 +1,3 @@
+D:/github/study_note/helloworld/build/CMakeFiles/HelloWorld.dir
+D:/github/study_note/helloworld/build/CMakeFiles/ALL_BUILD.dir
+D:/github/study_note/helloworld/build/CMakeFiles/ZERO_CHECK.dir

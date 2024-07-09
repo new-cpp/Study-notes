@@ -1,0 +1,34 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.24/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/Compiler/MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/FeatureSummary.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake
+D:/github/study_note/sdl/CMakeLists.txt
+D:/github/study_note/sdl/build/CMakeFiles/3.24.2/CMakeCXXCompiler.cmake
+D:/github/study_note/sdl/build/CMakeFiles/3.24.2/CMakeRCCompiler.cmake
+D:/github/study_note/sdl/build/CMakeFiles/3.24.2/CMakeSystem.cmake
+D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/share/sdl2/SDL2Config.cmake
+D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/share/sdl2/SDL2ConfigVersion.cmake
+D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/share/sdl2/SDL2mainTargets-debug.cmake
+D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/share/sdl2/SDL2mainTargets-release.cmake
+D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/share/sdl2/SDL2mainTargets.cmake
+D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/share/sdl2/SDL2staticTargets-debug.cmake
+D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/share/sdl2/SDL2staticTargets-release.cmake
+D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/share/sdl2/SDL2staticTargets.cmake
+D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/share/sdl2/sdlfind.cmake
+D:/github/study_note/sdl/vcpkg-configuration.json
+D:/github/study_note/sdl/vcpkg.json
+D:/tools/vcpkg/scripts/buildsystems/vcpkg.cmake

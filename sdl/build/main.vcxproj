@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B35E7566-969A-3BC6-9A8F-E2E02F18AF66}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>main</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\github\study_note\sdl\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\github\study_note\sdl\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\github\study_note\sdl\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">main.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\github\study_note\sdl\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">main.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/include" /external:I "D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/include/SDL2"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\include;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\include;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\PowerShell\7\pwsh.exe" -noprofile -executionpolicy Bypass -file D:/tools/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/github/study_note/sdl/build/Debug/main.exe -installedDir D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/debug/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>vcpkg_installed\x64-windows-static\debug\lib\SDL2-staticd.lib;vcpkg_installed\x64-windows-static\debug\lib\manual-link\SDL2maind.lib;vcpkg_installed\x64-windows-static\debug\lib\SDL2-staticd.lib;kernel32.lib;user32.lib;gdi32.lib;winmm.lib;imm32.lib;ole32.lib;oleaut32.lib;version.lib;uuid.lib;advapi32.lib;setupapi.lib;dinput8.lib;shell32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/github/study_note/sdl/build/Debug/main.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/github/study_note/sdl/build/Debug/main.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/include" /external:I "D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/include/SDL2"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\include;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\include;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\PowerShell\7\pwsh.exe" -noprofile -executionpolicy Bypass -file D:/tools/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/github/study_note/sdl/build/Release/main.exe -installedDir D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>vcpkg_installed\x64-windows-static\lib\SDL2-static.lib;vcpkg_installed\x64-windows-static\lib\manual-link\SDL2main.lib;vcpkg_installed\x64-windows-static\lib\SDL2-static.lib;kernel32.lib;user32.lib;gdi32.lib;winmm.lib;imm32.lib;ole32.lib;oleaut32.lib;version.lib;uuid.lib;advapi32.lib;setupapi.lib;dinput8.lib;shell32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/github/study_note/sdl/build/Release/main.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/github/study_note/sdl/build/Release/main.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/include" /external:I "D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/include/SDL2"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\include;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\include;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\PowerShell\7\pwsh.exe" -noprofile -executionpolicy Bypass -file D:/tools/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/github/study_note/sdl/build/MinSizeRel/main.exe -installedDir D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>vcpkg_installed\x64-windows-static\lib\SDL2-static.lib;vcpkg_installed\x64-windows-static\lib\manual-link\SDL2main.lib;vcpkg_installed\x64-windows-static\lib\SDL2-static.lib;kernel32.lib;user32.lib;gdi32.lib;winmm.lib;imm32.lib;ole32.lib;oleaut32.lib;version.lib;uuid.lib;advapi32.lib;setupapi.lib;dinput8.lib;shell32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/github/study_note/sdl/build/MinSizeRel/main.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/github/study_note/sdl/build/MinSizeRel/main.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/include" /external:I "D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/include/SDL2"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\include;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\include;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\include\SDL2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\PowerShell\7\pwsh.exe" -noprofile -executionpolicy Bypass -file D:/tools/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/github/study_note/sdl/build/RelWithDebInfo/main.exe -installedDir D:/github/study_note/sdl/build/vcpkg_installed/x64-windows-static/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>vcpkg_installed\x64-windows-static\lib\SDL2-static.lib;vcpkg_installed\x64-windows-static\lib\manual-link\SDL2main.lib;vcpkg_installed\x64-windows-static\lib\SDL2-static.lib;kernel32.lib;user32.lib;gdi32.lib;winmm.lib;imm32.lib;ole32.lib;oleaut32.lib;version.lib;uuid.lib;advapi32.lib;setupapi.lib;dinput8.lib;shell32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/github/study_note/sdl/build/RelWithDebInfo/main.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/github/study_note/sdl/build/RelWithDebInfo/main.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\github\study_note\sdl\CmakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/github/study_note/sdl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/github/study_note/sdl -BD:/github/study_note/sdl/build --check-stamp-file D:/github/study_note/sdl/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FeatureSummary.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\github\study_note\sdl\build\CMakeFiles\3.24.2\CMakeCXXCompiler.cmake;D:\github\study_note\sdl\build\CMakeFiles\3.24.2\CMakeRCCompiler.cmake;D:\github\study_note\sdl\build\CMakeFiles\3.24.2\CMakeSystem.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2Config.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2ConfigVersion.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2mainTargets-debug.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2mainTargets-release.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2mainTargets.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2staticTargets-debug.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2staticTargets-release.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2staticTargets.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\sdlfind.cmake;D:\github\study_note\sdl\vcpkg-configuration.json;D:\github\study_note\sdl\vcpkg.json;D:\tools\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\github\study_note\sdl\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/github/study_note/sdl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/github/study_note/sdl -BD:/github/study_note/sdl/build --check-stamp-file D:/github/study_note/sdl/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FeatureSummary.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\github\study_note\sdl\build\CMakeFiles\3.24.2\CMakeCXXCompiler.cmake;D:\github\study_note\sdl\build\CMakeFiles\3.24.2\CMakeRCCompiler.cmake;D:\github\study_note\sdl\build\CMakeFiles\3.24.2\CMakeSystem.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2Config.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2ConfigVersion.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2mainTargets-debug.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2mainTargets-release.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2mainTargets.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2staticTargets-debug.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2staticTargets-release.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2staticTargets.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\sdlfind.cmake;D:\github\study_note\sdl\vcpkg-configuration.json;D:\github\study_note\sdl\vcpkg.json;D:\tools\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\github\study_note\sdl\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/github/study_note/sdl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/github/study_note/sdl -BD:/github/study_note/sdl/build --check-stamp-file D:/github/study_note/sdl/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FeatureSummary.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\github\study_note\sdl\build\CMakeFiles\3.24.2\CMakeCXXCompiler.cmake;D:\github\study_note\sdl\build\CMakeFiles\3.24.2\CMakeRCCompiler.cmake;D:\github\study_note\sdl\build\CMakeFiles\3.24.2\CMakeSystem.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2Config.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2ConfigVersion.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2mainTargets-debug.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2mainTargets-release.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2mainTargets.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2staticTargets-debug.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2staticTargets-release.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2staticTargets.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\sdlfind.cmake;D:\github\study_note\sdl\vcpkg-configuration.json;D:\github\study_note\sdl\vcpkg.json;D:\tools\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\github\study_note\sdl\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/github/study_note/sdl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/github/study_note/sdl -BD:/github/study_note/sdl/build --check-stamp-file D:/github/study_note/sdl/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FeatureSummary.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\github\study_note\sdl\build\CMakeFiles\3.24.2\CMakeCXXCompiler.cmake;D:\github\study_note\sdl\build\CMakeFiles\3.24.2\CMakeRCCompiler.cmake;D:\github\study_note\sdl\build\CMakeFiles\3.24.2\CMakeSystem.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2Config.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2ConfigVersion.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2mainTargets-debug.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2mainTargets-release.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2mainTargets.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2staticTargets-debug.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2staticTargets-release.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\SDL2staticTargets.cmake;D:\github\study_note\sdl\build\vcpkg_installed\x64-windows-static\share\sdl2\sdlfind.cmake;D:\github\study_note\sdl\vcpkg-configuration.json;D:\github\study_note\sdl\vcpkg.json;D:\tools\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\github\study_note\sdl\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\github\study_note\sdl\1_hello.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\github\study_note\sdl\build\ZERO_CHECK.vcxproj">
+      <Project>{D551BD67-A97F-3D1C-8A96-23F213AF09A0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
