@@ -22,7 +22,9 @@ first time :
 next :
  #add depedencies :
  vcpkg add port fmt
- 
+ vcpkg add port sdl2-image 
+vcpkg add port sdl2-ttf
+
  
  create CMakeLists.txt:
    {
@@ -71,3 +73,10 @@ create CMakePresets.json:
  cmake --preset=default -DFILENAME="filename"
  cmake --build build
  .\build\main.exe
+
+
+
+- install package outside the project:
+ vcpkg.exe install sdl2-ttf:x64-windows-static
+ vcpkg.exe install sdl2-image:x64-windows-static
+ vcpkg.exe install sdl2:x64-windows-static

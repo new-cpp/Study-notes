@@ -6,7 +6,7 @@
 
 #include <string>
 #include <string_view>
-#include <iostream>
+
 
 constexpr int SCREEN_WIDTH{ 480 };
 constexpr int SCREEN_HEIGHT{ 620};
@@ -186,18 +186,6 @@ void Game::init()
  m_running = true;
  // Create texture from images or text here
  // by functions : load_from_file or load_from_text and assigned it to proper texture in texture_array
-
- SDL_Color color_1{0,0,0,0xff};
- m_texture_array[0].load_from_text("UP",  color_1,  m_renderer, m_font);
-
-
- SDL_Color color_2{100,9,6,0xff};
- m_texture_array[1].load_from_text("down",  color_2,  m_renderer, m_font);
-
-
- SDL_Color color_3{10,89,66,0xff};
- m_texture_array[2].load_from_text("default",  color_3,  m_renderer, m_font);
-
 }
 
 
@@ -243,7 +231,7 @@ void Game::render()
     SDL_RenderClear(m_renderer);
 
     //render current texture
-    m_texture_array[m_next_Texture].render_to_screen( m_renderer);
+    //m_texture_array[m_next_Texture].render_to_screen( m_renderer);
 
     
     //update screen

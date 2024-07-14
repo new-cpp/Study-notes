@@ -1,3 +1,6 @@
+# lanch : sh build.sh filename
+
+
 
 # wsl : build 
 # file="$1"
@@ -13,4 +16,4 @@ cmake --preset=default -DFILENAME="$1"
 cmake --build build
 
 echo "execute"
-./build/Debug/main.exe
+#./build/Debug/main.exe
