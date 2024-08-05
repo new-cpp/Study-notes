@@ -6,12 +6,70 @@
 
 #include <string>
 #include <string_view>
-
+#include <sstream>
+#include <iostream>
 
 constexpr int SCREEN_WIDTH{ 480 };
 constexpr int SCREEN_HEIGHT{ 620};
 std::string_view title {" key_state" };
 
+
+
+
+struct Timer
+{
+
+    Timer()
+    {
+        m_start=SDL_GetTicks();
+        m_game_start = m_start;
+
+        std::cout<<"start "<<m_start<<'\n';
+    }
+
+    
+/*
+     why close function instread of dtor: in case of m_time is a class member non static 
+     the call to the dtor of call Timer happen after the call to 
+     close method .. which in turn close sdl subsystems 
+     the counter reset... and call to SDL_GetTicks at the end 
+     give the value 0
+    */
+
+    // ofcourse there is  a better and easier way to do this ... 
+    // just the first idea and i'm too lazy
+    void close()
+    {
+        auto end = SDL_GetTicks();
+        
+        std::cout<<end<<'\n';
+        std::cout<<m_game_start<<'\n';
+        auto elapsed_Ms = (end - m_game_start)/(1000.f);
+
+        std::cout<<"elapsed time in seconds" << elapsed_Ms<<'\n';
+    }
+
+    std::string c_str()
+    {
+      m_time_text.str("");
+      m_time_text << "elapsed time in seconds " <<passed_time();
+      return m_time_text.str();
+    }
+
+    double passed_time()
+    {
+        return (SDL_GetTicks() - m_start)/(1000.);
+    }
+
+    void restart()
+    {
+        m_start= SDL_GetTicks();
+    }
+
+    uint32_t m_start;
+    uint32_t m_game_start;
+    std::stringstream m_time_text;
+};
 
 struct Sound_manager 
 {
@@ -60,7 +118,6 @@ void Sound_manager::free()
     {
         case sound_type::CHUNK:
             Mix_FreeChunk(m_sound.m_chunk);
-            m_sound.m_chunk = nullptr;
         case sound_type::MUSIC:
             Mix_FreeMusic(m_sound.m_music);
             m_sound.m_music = nullptr;
@@ -198,17 +255,18 @@ struct Game
    SDL_Window*  m_window  {nullptr};
 
    bool m_running {false};
-   Uint8 m_next_sound{0};
-   Texture_manager m_texture;
-   Sound_manager m_sounds[5];
-   TTF_Font*    m_font {nullptr};
-};
+   Texture_manager m_prompt_texture;
+   Texture_manager m_time_passed_texture;
 
+   TTF_Font*    m_font {nullptr};
+
+   Timer m_time;
+   };
 
 
 void Game::init()
 { 
-  if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO))
+  if(SDL_Init( SDL_INIT_VIDEO | SDL_INIT_AUDIO))
   {
       printf("can't init SDL %s\n", SDL_GetError());
       return ;
@@ -258,13 +316,8 @@ void Game::init()
  // Create texture from images or text here
  // by functions : load_from_file or load_from_text and assigned it to proper texture in texture_array
 
-m_sounds[0].load_Effect("asset/sound/scratch.wav");
-m_sounds[1].load_Effect("asset/sound/high.wav");
-m_sounds[2].load_Effect("asset/sound/low.wav");
-m_sounds[3].load_Effect("asset/sound/medium.wav");
-m_sounds[4].load_Music("asset/sound/beat.wave");
 
-m_texture.load_from_text("choose number from 0 to 4",{0,0xff,0,0xff},m_renderer,m_font);
+ m_prompt_texture.load_from_text("type 'R' to Restart timer , 'D' to display time since the start of the program ",{0,0xff,0,0xff},m_renderer,m_font);
 
 }
 
@@ -288,64 +341,10 @@ void Game::update()
 
     const Uint8* currentKeyStates = SDL_GetKeyboardState(nullptr);
 
-    if(currentKeyStates[SDL_SCANCODE_0])
+    if(currentKeyStates[SDL_SCANCODE_R])
     {
-        // play first sound effect
-        Mix_PlayChannel(-1,m_sounds[0].m_sound.m_chunk,0);
-        puts(" 0 was pressed");
-
+        m_time.restart();
     }
-    else if(currentKeyStates[SDL_SCANCODE_1])
-    {
-        // play second sound effect
-        puts("1 was pressed");
-        Mix_PlayChannel(-1,m_sounds[1].m_sound.m_chunk,0);
-
-    }
-    else if(currentKeyStates[SDL_SCANCODE_2])
-    {
-        // play second sound effect
-        puts("2 was pressed");
-        Mix_PlayChannel(-1,m_sounds[2].m_sound.m_chunk,0);
-    }
-    else if(currentKeyStates[SDL_SCANCODE_3])
-    {
-        // play third sound effect
-        puts("3 was pressed");
-        Mix_PlayChannel(-1,m_sounds[3].m_sound.m_chunk,0);
-    }
-    else if (currentKeyStates[SDL_SCANCODE_4])
-    {
-        // play music 
-        puts("4 was pressed");
-        if( Mix_PlayingMusic() == 0 )
-        {
-            Mix_PlayMusic( m_sounds[4].m_sound.m_music, -1 );
-        }
-  
-    }
-    else if (currentKeyStates[SDL_SCANCODE_5])
-    {
-        //resume music
-        if(Mix_PlayingMusic())
-        {
-            if( Mix_PausedMusic() == 1)
-                Mix_ResumeMusic();
-        }
-    }
-    else if (currentKeyStates[SDL_SCANCODE_6])
-    {
-        //pause musiv
-        if(Mix_PlayingMusic())
-        {
-            if(Mix_PausedMusic() != 1)
-                Mix_PauseMusic();
-        }
-    }
-    //halt music
-    else if(currentKeyStates[SDL_SCANCODE_7])
-         Mix_HaltMusic();
-    
 }
 
 void Game::render()
@@ -359,9 +358,14 @@ void Game::render()
     //render current texture
     //m_texture_array[m_next_Texture].render_to_screen( m_renderer);
 
-    SDL_Rect quad{ 10,10,0,0};
-    m_texture.render_to_quad(m_renderer,nullptr,&quad,0,nullptr);
+    SDL_Rect quad{0 ,0, 480,600};
+    m_prompt_texture.render_to_quad(m_renderer,nullptr,&quad,0,nullptr);
 
+
+
+    m_time_passed_texture.load_from_text(m_time.c_str(),{0,0xff,0,0xff},m_renderer,m_font);
+    quad.y += 20;
+    m_time_passed_texture.render_to_quad(m_renderer, nullptr, &quad, 0,nullptr);
 
     
     //update screen
@@ -371,14 +375,12 @@ void Game::render()
 
 void Game::close()   
 {     
+    m_time.close();
 	SDL_DestroyRenderer(m_renderer);     
 	SDL_DestroyWindow(m_window);     
 	m_renderer=nullptr;     
 	m_window = nullptr;      
 	
-    m_texture.free();
-    for(int i = 0 ; i < 5;++i)
-        m_sounds[i].free();
 
     Mix_Quit();
 	IMG_Quit();     
