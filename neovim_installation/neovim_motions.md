@@ -64,12 +64,30 @@
     - * : shortcut for /string (if the string being cut)
     - # : same but for reverse search
 
+    - ctrl + l or :noh   : to clear the hightlight after a search
+
+    - / + ctrl + n(or p) : to cycle in list of previous search
+    - q + /              : buffer with all the previous searchs 
+                         : ?word to seach in this buffer
 
    + bonus  zz: center the view
    + bonus  % : jump to the matched ({[ closing character.
 
 
+   - in case of a long line not fited in the screen and look like a paragraph :
+     - 0 or $ will go to the end of the paragraph instread of the visible line .
+     - use g + O(or $) to go to beginning or end of the visible line.
+     - use g + j(klh)  to move in the paragraph
+     - g + q : format a long line as a paragraph
+     - g + a : git the hex and octal and ascci value of a character
 
+
+   - replace a word globaly:
+      :s/first_word/replacement/g (just the first instances)
+      g&(redo all the substution to the all files)
+
+
+   -gi : take back the last line you were editing
 
 ### combination command count motion:
  # part one:
