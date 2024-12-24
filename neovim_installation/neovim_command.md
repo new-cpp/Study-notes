@@ -9,6 +9,10 @@
  :buffers              -> list of buffer
  :bnext (bprevious)    -> next(preious) buffer
   
+ :tabe : open file in tab
+
+ :pwd -> current working dir
+ :cd  -> change working dir
 
 ## build-in autocompletion:
    insert mode + ctlr + n( or p)
@@ -20,6 +24,10 @@
   :enew
   :bd! (close and save buffer)
 
+
+## tabs:
+ gt : switch forward (next tab)
+ gT : switch backward
 
 ## modes motion as commands:
  :normal I hello world  ====> insert mode hello world into line.
@@ -34,3 +42,17 @@
 ## run exteranl commands :! command
    -vgg (select all lines)
    -:!sort |uniq (sort all lines)
+
+## vimgrep
+  :vimgrep main **/*.java
+  :vimgrep /long string regex/ **/*.c
+  :clist  -> all the search result of vimgrep
+  :cn     -> next search result 
+  :cp     -> previous search result
+  :cfirst -> jump to the first search result
+  :clast  -> jump to the last search result
+
+
+## text-objects: 
+   - :help text-objects (TODO)
+

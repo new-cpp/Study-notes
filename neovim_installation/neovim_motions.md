@@ -89,6 +89,11 @@
 
    -gi : take back the last line you were editing
 
+
+## folding :
+  - selection + zf (fold)
+  - zo (open)
+
 ### combination command count motion:
  # part one:
 
@@ -109,3 +114,12 @@
    - yt(: yank up to ...
    - vF= : jump back and hightlight till '='
    - d2f(: delete up to the second (
+
+
+ # part three:
+   - ci" : delete the content between "" and put you in insert mode.
+   - ci( 
+   - ci{
+
+
+

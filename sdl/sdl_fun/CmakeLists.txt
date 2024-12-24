@@ -1,0 +1,60 @@
+
+cmake_minimum_required(VERSION 3.1...3.29)
+
+project(
+  SDL_leaning_example
+  VERSION 1.0
+  LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+
+
+message("here : " ${FILENAME})
+add_executable( ${PROJECT_NAME} ${FILENAME}.cpp)
+
+
+find_package(SDL2 CONFIG REQUIRED)
+
+find_package(SDL2_image REQUIRED)
+
+find_package(SDL2_ttf REQUIRED)
+
+find_package(SDL2_Mixer REQUIRED)
+
+find_package(sdl2-gfx CONFIG REQUIRED)
+
+
+#target_link_libraries( ${PROJECT_NAME} PRIVATE SDL2::SDL2 SDL2::SDL2main SDL2::SDL2-static)
+
+target_link_libraries(  ${PROJECT_NAME} PRIVATE
+    $<IF:$<TARGET_EXISTS:SDL2::SDL2>,SDL2::SDL2,SDL2::SDL2-static>
+    $<IF:$<TARGET_EXISTS:SDL2_image::SDL2_image>,SDL2_image::SDL2_image,SDL2_image::SDL2_image-static>
+    $<IF:$<TARGET_EXISTS:SDL2_ttf::SDL2_ttf>,SDL2_ttf::SDL2_ttf,SDL2_ttf::SDL2_ttf-static>
+
+    $<IF:$<TARGET_EXISTS:SDL2_mixer::SDL2_mixer>,SDL2_mixer::SDL2_mixer,SDL2_mixer::SDL2_mixer-static>
+) 
+
+
+target_link_libraries(${PROJECT_NAME} PRIVATE SDL2::SDL2_gfx)
+
+
+# Add SDL2_image library
+#find_package(SDL2_image REQUIRED)
+#target_link_libraries(${PROJECT_NAME} SDL2::Image)
+
+# Add SDL2_ttf library
+#find_package(SDL2_ttf REQUIRED)
+#target_link_libraries(${PROJECT_NAME} SDL2::TTF)
+
+# Add SDL2_net library
+#find_package(SDL2_net REQUIRED)
+#target_link_libraries(${PROJECT_NAME} SDL2::Net)
+
+# Add SDL2_mixer library
+#find_package(SDL2_mixer REQUIRED)
+#target_link_libraries(${PROJECT_NAME} SDL2::Mixer)
+
+# Add SDL2_gfx library
+#find_package(SDL2_gfx REQUIRED)
+#target_link_libraries(${PROJECT_NAME} SDL2::GFX)
+
