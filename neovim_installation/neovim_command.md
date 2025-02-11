@@ -56,3 +56,9 @@
 ## text-objects: 
    - :help text-objects (TODO)
 
+
+## search and replace :
+ - :%s/word1/word2/g  --> repalce all word1 occurences with word2 
+ - :s/word1/word2/g   --> replace all word1 occurences with word2 in the current line
+ - :%s/word1/word2    --> repalce all first occurences of word1 in each line with word2
+ - :%s#/#+#g          --> repalce all occurences of '/' with '+' using '#' as delmiter of search and replace command.
